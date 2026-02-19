@@ -14,15 +14,15 @@ llave = 3
 #   Recorrer cada letra del mensaje y obtenemos su valor en ASCII,
 for letra in mensaje:
    
-    # Determinar si es mayúscula o minúscula para poder usar el ascii adecuado
+    # Determinar si es mayï¿½scula o minï¿½scula para poder usar el ascii adecuado
     inicio = ord('A') if letra.isupper() else ord('a')
     
     # Restamos el valor de inicio para que el rango de valores sea de 0 a 25, 
     # luego sumamos la llave y aplicamos el modulo para que se mantenga dentro del rango
     # y finalmente sumamos el valor de inicio para volver al rango de caracteres ASCII
-    valor = (ord(letra)  - inicio + llave)%25 + inicio
+    valor = (ord(letra)  - inicio + llave)%26 + inicio
 
-    # Descomentar la siguiente línea para ver el valor de cada letra cifrada
+    # Descomentar la siguiente lï¿½nea para ver el valor de cada letra cifrada
     # print(valor)
 
     # Agregamos el nuevo valor a la lista del nuevo mensaje

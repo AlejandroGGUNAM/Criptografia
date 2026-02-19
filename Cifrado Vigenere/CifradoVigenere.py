@@ -41,7 +41,7 @@ for letra in mensaje:
     
     # Para descifrar debemos cambiar el + de la llave_lista por un -
     # valor = (ord(letra) - inicio + llave_lista[i])%25 + inicio
-    valor = (ord(letra) - inicio - llave_lista[i])%25 + inicio
+    valor = (ord(letra) - inicio + llave_lista[i])%26 + inicio
     
     nuevo_mensaje.append(valor)
     
