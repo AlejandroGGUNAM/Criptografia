@@ -9,7 +9,8 @@ nuevo_mensaje = []
 
 # Llave para cifrar
 # Es un cadena que se iterará hasta cifrar todo el mensaje
-llave = "gybnqkaap" 
+# Ejemplo llave válida: "gybnqkurp"; Ejemplo de llave no válida. "gybnqkaap"
+llave = input("Escribe la llave de 9 caracteres: ")  
 
 # Lista para guardar la llave en ascii
 llave_lista = []
@@ -101,5 +102,6 @@ for i in range(decod.shape[0]):
     for j in range(decod.shape[1]):
         mensaje_descifrado+=chr(decod[i, j]+inicio)
 print("Mensaje descifrado: ",mensaje_descifrado)
+
 
 
