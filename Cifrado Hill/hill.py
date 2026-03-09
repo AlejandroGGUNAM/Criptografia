@@ -15,15 +15,11 @@ llave = "gybnqkaap"
 llave_lista = []
 
 # Iteramos sobre la cadena "llave" y encontramos su valor en el alfabeto
-# así conocemos cuanto debemos de desplazarnos
 # Agregamos ese valor en una lista para usarlo después
 for letra in llave:
     # Determinar si es mayúscula o minúscula
     inicio = ord('A') if letra.isupper() else ord('a')
-    
     valor_llave = ord(letra) - inicio
-    # Descomentar si se quiere saber el valor de cada una
-    # print(valor_llave)
     llave_lista.append(valor_llave)
 
 # Impresion de los valores que se desplazarán para cada letra del mensaje
@@ -105,4 +101,5 @@ for i in range(decod.shape[0]):
     for j in range(decod.shape[1]):
         mensaje_descifrado+=chr(decod[i, j]+inicio)
 print("Mensaje descifrado: ",mensaje_descifrado)
+
 
