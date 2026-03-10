@@ -1,0 +1,32 @@
+import random
+
+def vernam_cifrar(mensaje): # Función para cifrar
+    mensaje_bytes = mensaje.encode("utf-8") # Convertir el mensaje de texto a bytes
+
+    llave = []   # Arreglo para la lalve
+    cifrado = [] # Arreglo para el mensaje cifrado
+
+    for b in mensaje_bytes:         # La llave debe ser igual de grande que el mensaje
+        k = random.randint(0,255)   # byte aleatorio para crear la llave
+        llave.append(k)          
+        cifrado.append(b ^ k)       # operación XOR
+
+    return bytes(cifrado), bytes(llave) # Regresa el cifrado y la llave en formato de bytes
+
+def vernam_descifrar(cifrado, llave): # Función para descifrar
+    resultado = [] # Arreglo para el mensaje descifrado
+
+    for i in range(len(cifrado)): 
+        resultado.append(cifrado[i] ^ llave[i]) # segunda operación XOR para descifrar
+
+    return bytes(resultado).decode("utf-8") # Regresa el mensaje en formato de texto
+
+mensaje = input("Ingresa un mensaje para cifrar: ") # El suario ingresa el mensaje
+
+cifrado, llave = vernam_cifrar(mensaje) # Llamada a la función para cifrar
+
+print("Texto cifrado (hex):", cifrado.hex())
+print("Llave (hex):", llave.hex())
+
+recuperado = vernam_descifrar(cifrado, llave) #Descifrar el mensaje
+print("Descifrado:", recuperado)
