@@ -1,0 +1,88 @@
+:root {
+    --ss-ink: #172033;
+    --ss-muted: #667085;
+    --ss-panel: #ffffff;
+    --ss-border: #d9dee8;
+    --ss-soft: #eef4f1;
+    --ss-accent: #0f766e;
+    --ss-accent-dark: #115e59;
+}
+
+body {
+    color: var(--ss-ink);
+    background:
+        linear-gradient(135deg, rgba(15, 118, 110, .10), rgba(30, 64, 175, .06)),
+        #f6f8fb;
+}
+
+.access-page {
+    min-height: 100vh;
+}
+
+.brand-mark {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    background: var(--ss-accent);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.access-shell {
+    width: min(1120px, 100%);
+}
+
+.access-info {
+    border: 1px solid var(--ss-border);
+    background: var(--ss-panel);
+}
+
+.login-panel {
+    border: 1px solid var(--ss-border);
+    background: var(--ss-panel);
+    box-shadow: 0 1rem 2.75rem rgba(23, 32, 51, .08);
+}
+
+.security-strip {
+    background: var(--ss-soft);
+    border: 1px solid rgba(15, 118, 110, .18);
+}
+
+.step-badge {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--ss-accent);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    font-size: .875rem;
+    font-weight: 700;
+}
+
+.btn-accent {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--ss-accent);
+    --bs-btn-border-color: var(--ss-accent);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--ss-accent-dark);
+    --bs-btn-hover-border-color: var(--ss-accent-dark);
+    --bs-btn-focus-shadow-rgb: 15, 118, 110;
+}
+
+.form-control:focus {
+    border-color: var(--ss-accent);
+    box-shadow: 0 0 0 .25rem rgba(15, 118, 110, .18);
+}
+
+@media (max-width: 991.98px) {
+    .access-page {
+        min-height: auto;
+    }
+}
